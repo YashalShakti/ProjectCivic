@@ -290,12 +290,13 @@ import java.util.List;
                        TextView tv=new TextView(this);
                        tv.setText("Data retrieved from the Cloud");
                        d.setContentView(tv);
-                       d.show();
-
-                       ParseQuery<ParseObject> query = ParseQuery.getQuery("Data");
+                        getData[0].setText("");
+                       getData[1].setText("");
                        ParseGeoPoint userLocation = new ParseGeoPoint(Double.parseDouble(sel.getText().toString()),Double.parseDouble(sel2.getText().toString()));
-                       query.whereNear("Location",userLocation);
+                       ParseQuery<ParseObject> query = ParseQuery.getQuery("Data");
 
+                       query.whereNear("Location",userLocation);
+                        query.whereWithinKilometers("Location",userLocation,3.0);
                        query.findInBackground(new FindCallback<ParseObject>() {
 
 
@@ -315,7 +316,7 @@ import java.util.List;
                                }
                            }
                        });
-                   }
+                       d.show(); }
 
                }
 
@@ -350,9 +351,9 @@ import java.util.List;
                         d.show();
                         setData[0].setText("");
                         setData[1].setText("");
-                        setData[2].setText("");
+                       // setData[2].setText("");
                         setData[3].setText("");
-                        loc.setText("");
+                      //  loc.setText("");
                         setData[0].requestFocus();
                     }
                 }

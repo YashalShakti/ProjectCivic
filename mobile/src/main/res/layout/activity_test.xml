@@ -115,19 +115,19 @@
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:hint="Latitude"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:ems="10"
             android:layout_weight="50"
-            android:id="@+id/selection2"
+            android:id="@+id/selection"
             android:gravity="center"/>
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="50"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:ems="10"
             android:hint="Logitude"
-            android:id="@+id/selection"
+            android:id="@+id/selection2"
             android:gravity="center"/></LinearLayout>
 
 
