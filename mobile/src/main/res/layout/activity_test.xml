@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Test"
+    android:id="@+id/rel"
+    android:weightSum="100">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/setlist"
+        android:layout_weight="35">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Name"
+                android:id="@+id/set1"
+                android:gravity="center"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Type"
+                android:id="@+id/set2"
+                android:gravity="center"/>
+          <LinearLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:weightSum="100">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Latitude"
+                android:layout_weight="50"
+                android:id="@+id/set3"
+                android:gravity="center"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:hint="Longitude"
+                android:id="@+id/set5"
+                android:gravity="center"/></LinearLayout>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Comment"
+                android:id="@+id/set4"
+                android:gravity="center"/>
+            </LinearLayout>
+        </ScrollView>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:layout_below="@+id/setlist"
+        android:text="Store"
+        android:id="@+id/setButton"
+       />
+
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/getlist"
+        android:layout_weight="35"
+        android:layout_below="@+id/setButton"
+        android:layout_alignLeft="@+id/setButton"
+        android:layout_alignStart="@+id/setButton"
+        android:layout_marginTop="29dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:weightSum="10">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="9"
+                android:id="@+id/get1"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:id="@+id/get2"
+                android:gravity="center"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:id="@+id/lastlayout"
+        android:layout_weight="10"
+        android:layout_below="@+id/getlist"
+        android:layout_centerHorizontal="true">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:hint="Latitude"
+            android:inputType="number"
+            android:ems="10"
+            android:layout_weight="50"
+            android:id="@+id/selection2"
+            android:gravity="center"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="50"
+            android:inputType="number"
+            android:ems="10"
+            android:hint="Logitude"
+            android:id="@+id/selection"
+            android:gravity="center"/></LinearLayout>
+
+
+
+
+
+
+
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Get"
+        android:layout_weight="10"
+        android:id="@+id/getButton"
+       android:layout_below="@+id/lastlayout"
+        />
+
+
+
+
+</RelativeLayout>
