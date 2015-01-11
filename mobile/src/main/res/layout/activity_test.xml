@@ -61,9 +61,17 @@
         android:layout_height="wrap_content"
         android:layout_weight="10"
         android:layout_below="@+id/setlist"
+        android:text="Open Map"
+        android:id="@+id/mapButton"
+       />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:layout_below="@+id/mapButton"
         android:text="Store"
         android:id="@+id/setButton"
-       />
+        />
 
 
 

@@ -37,7 +37,7 @@ import java.util.List;
 
  public class Test extends Activity implements View.OnClickListener,GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
-     Button set,get;
+     Button set,get,map;
 
 
 
@@ -91,6 +91,7 @@ import java.util.List;
         sel= (EditText)findViewById(R.id.selection);
         sel2= (EditText)findViewById(R.id.selection2);
         loc=(EditText)findViewById(R.id.set5);
+         map=(Button)findViewById(R.id.mapButton);
          //Initialize
 
 
@@ -98,6 +99,7 @@ import java.util.List;
          //OnClicks
         get.setOnClickListener(this);
         set.setOnClickListener(this);
+         map.setOnClickListener(this);
          //OnClicks
 
 
@@ -358,6 +360,11 @@ import java.util.List;
                     }
                 }
                  break;
+             case R.id.mapButton:
+                 Intent intent =  new Intent(this,MapsActivity.class);
+                intent.putExtra("latitude",setData[2].getText().toString());
+                 intent.putExtra("longitude",loc.getText().toString());
+                 startActivity(intent);
          }
 
      }
